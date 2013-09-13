@@ -1,3 +1,6 @@
+src/seedrecruit/config/local.py
+*.sqlite3
+
 *.py[cod]
 
 # C extensions
