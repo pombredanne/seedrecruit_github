@@ -11,7 +11,7 @@ class TestApiEndpoints(TestCase):
         self.client = Client()
 
     def test_with_username(self):
-        response = self.client.get(reverse('api:user', args=['mikeywaites']))
+        response = self.client.get(reverse('api:user', args=['tw']))
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertIn('commits', content)
