@@ -13,11 +13,14 @@ gh = login(local.USERNAME, token=local.OAUTH)
 
 def get_push_events(username):
     user = gh.user(username)
-    for event in user.iter_events():
-        if not event.type == 'PushEvent':
-            continue
-        event.commits = list(get_commits(event))
-        yield event
+    try:
+        for event in user.iter_events():
+            if not event.type == 'PushEvent':
+                continue
+            event.commits = list(get_commits(event))
+            yield event
+    except AttributeError:
+        pass
 
 
 def get_forked_repositories(username):
