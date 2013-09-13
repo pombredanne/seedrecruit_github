@@ -8,7 +8,7 @@ from pygments.lexers import guess_lexer_for_filename
 from seedrecruit.config import local
 
 
-gh = login('tw', token=local.OAUTH)
+gh = login(local.USERNAME, token=local.OAUTH)
 
 
 def get_push_events(username):

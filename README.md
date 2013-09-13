@@ -12,5 +12,5 @@ instructions
 * install the dependencies - `$ pip install -r requirements.txt`
 * `$ cd seedrecruit`
 * `$ python setup.py develop`
-* fill in an oauth key for in `src/seedrecruit/config/local.py.dist`, removing `.dist` extension
+* fill in a username and oauth key for in `src/seedrecruit/config/local.py.dist`, removing `.dist` extension
 * you should now be able to run tests and the web application `$ django-admin.py runserver`
